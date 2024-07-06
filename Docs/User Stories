@@ -1,0 +1,123 @@
+
+
+### User Stories
+
+#### As a Customer
+1. **User Story 1: Account Registration**
+   - As a customer, I want to create an account so that I can access the e-commerce platform.
+   - **Acceptance Criteria:**
+     - A registration form with fields for username, password, and confirmation.
+     - A role selector defaulted to "Customer."
+     - Upon successful registration, a success message is displayed, and I am redirected to the login page.
+
+2. **User Story 2: Account Login**
+   - As a customer, I want to log in to my account so that I can browse and purchase products.
+   - **Acceptance Criteria:**
+     - A login form with fields for username and password.
+     - A successful login redirects me to the home page.
+     - An unsuccessful login displays an error message.
+
+3. **User Story 3: View Home Page**
+   - As a customer, I want to view a home page with featured products and promotions so that I can see the latest offers.
+   - **Acceptance Criteria:**
+     - The home page displays a list of featured products with images, names, and prices.
+     - Clicking on a product takes me to the product details page.
+
+4. **User Story 4: Browse Product Catalog**
+   - As a customer, I want to browse through the product catalog so that I can find products to purchase.
+   - **Acceptance Criteria:**
+     - A product catalog page displays all available products with images, names, prices, and an "Add to Cart" button.
+     - I can search for products by name or category.
+
+5. **User Story 5: View Product Details**
+   - As a customer, I want to view detailed information about a product so that I can make an informed purchasing decision.
+   - **Acceptance Criteria:**
+     - A product details page displays the product image, name, price, description, and an "Add to Cart" button.
+     - A "Back to Catalog" button allows easy navigation back to the product catalog.
+
+6. **User Story 6: Add to Shopping Cart**
+   - As a customer, I want to add products to my shopping cart so that I can purchase them later.
+   - **Acceptance Criteria:**
+     - Clicking "Add to Cart" on a product adds it to my shopping cart.
+     - A success message is displayed confirming the addition.
+
+7. **User Story 7: View Shopping Cart**
+   - As a customer, I want to view my shopping cart so that I can see the items I have selected for purchase.
+   - **Acceptance Criteria:**
+     - A shopping cart page displays the products I have added, including names, quantities, prices, and a total amount.
+     - I can update the quantity or remove items from the cart.
+
+8. **User Story 8: Checkout**
+   - As a customer, I want to complete the checkout process so that I can purchase the items in my cart.
+   - **Acceptance Criteria:**
+     - A checkout page allows me to enter shipping and payment details.
+     - A summary of my order is displayed before finalizing the purchase.
+     - A success message is displayed upon successful order placement.
+
+9. **User Story 9: View Order History**
+   - As a customer, I want to view my past orders so that I can keep track of my purchases.
+   - **Acceptance Criteria:**
+     - An order history page displays a list of my past orders with details such as order ID, date, total amount, and status.
+
+10. **User Story 10: Manage Account Details**
+    - As a customer, I want to update my account details so that my information is always current.
+    - **Acceptance Criteria:**
+      - An account details page allows me to update my username and password.
+
+#### As a Seller
+1. **User Story 1: Account Registration**
+   - As a seller, I want to create an account so that I can manage my products on the e-commerce platform.
+   - **Acceptance Criteria:**
+     - A registration form with fields for username, password, and confirmation.
+     - A role selector allowing selection of "Seller."
+     - Upon successful registration, a success message is displayed, and I am redirected to the login page.
+
+2. **User Story 2: Account Login**
+   - As a seller, I want to log in to my account so that I can manage my products and view sales analytics.
+   - **Acceptance Criteria:**
+     - A login form with fields for username and password.
+     - A successful login redirects me to the seller dashboard.
+     - An unsuccessful login displays an error message.
+
+3. **User Story 3: Manage Products**
+   - As a seller, I want to add, edit, and delete products so that I can keep my product listings current.
+   - **Acceptance Criteria:**
+     - A seller dashboard provides forms to add new products with fields for name, description, price, and image.
+     - I can edit existing product details or delete products from my listings.
+
+4. **User Story 4: Process Orders**
+   - As a seller, I want to process orders so that I can fulfill customer purchases.
+   - **Acceptance Criteria:**
+     - The seller dashboard displays a list of orders for my products, including customer details and order status.
+     - I can update the order status (e.g., "Processing," "Shipped," "Delivered").
+
+5. **User Story 5: View Sales Analytics**
+   - As a seller, I want to view sales analytics so that I can track the performance of my products.
+   - **Acceptance Criteria:**
+     - The seller dashboard displays sales analytics, including total sales, most popular products, and revenue over time.
+
+#### As an Admin
+1. **User Story 1: Account Login**
+   - As an admin, I want to log in to my account so that I can manage the e-commerce platform.
+   - **Acceptance Criteria:**
+     - A login form with fields for username and password.
+     - A successful login redirects me to the admin panel.
+     - An unsuccessful login displays an error message.
+
+2. **User Story 2: Manage User Accounts**
+   - As an admin, I want to manage user accounts so that I can maintain the integrity of the platform.
+   - **Acceptance Criteria:**
+     - The admin panel displays a list of all users with options to remove users or reset passwords.
+     - I can search for users by username or role.
+
+3. **User Story 3: Moderate Product Listings**
+   - As an admin, I want to review and moderate product listings so that inappropriate content is not displayed.
+   - **Acceptance Criteria:**
+     - The admin panel displays a list of all products with options to approve, edit, or remove listings.
+
+4. **User Story 4: Handle Customer Service Tasks**
+   - As an admin, I want to handle customer service tasks so that customer issues are resolved efficiently.
+   - **Acceptance Criteria:**
+     - The admin panel provides tools for managing customer inquiries and resolving disputes between customers and sellers.
+
+These user stories cover the key functionalities for each user role in the Multi-Actor E-commerce System and will guide the development process to ensure all requirements are met.

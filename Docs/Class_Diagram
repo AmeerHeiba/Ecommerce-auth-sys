@@ -1,0 +1,92 @@
++-------------------+
+|      User         |
++-------------------+
+| - id: String      |
+| - username: String|
+| - password: String|
+| - role: String    |
++-------------------+
+| + getUsers()      |
+| + saveUsers(users)|
+| + addUser(user)   |
+| + authenticate(username, password)|
++-------------------+
+
++-------------------+
+|    Product        |
++-------------------+
+| - id: String      |
+| - name: String    |
+| - description: String |
+| - price: Number   |
+| - image: String   |
++-------------------+
+| + getProducts()   |
+| + saveProducts(products)|
+| + addProduct(product)|
+| + updateProduct(product)|
+| + deleteProduct(productId)|
+| + getProductById(productId)|
++-------------------+
+
++-------------------+
+|    Order          |
++-------------------+
+| - id: String      |
+| - userId: String  |
+| - items: Array    |
+| - total: Number   |
+| - shippingDetails: Object|
+| - date: Date      |
++-------------------+
+| + getOrders()     |
+| + saveOrders(orders)|
+| + addOrder(order) |
++-------------------+
+
++-------------------+
+|  AuthController   |
++-------------------+
+| + register(username, password, role)|
+| + login(username, password)|
+| + getCurrentUser()|
+| + logout()        |
++-------------------+
+
++-------------------+
+|  CartController   |
++-------------------+
+| + addToCart(productId, quantity)|
+| + removeFromCart(productId)|
+| + getCartItems()  |
+| + clearCart()     |
++-------------------+
+
++-------------------+
+|  OrderController  |
++-------------------+
+| + checkout(shippingDetails)|
++-------------------+
+
++-------------------+
+|  UserController   |
++-------------------+
+| + getUserOrders(userId)|
+| + updateUserDetails(userId, newDetails)|
++-------------------+
+
++-------------------+
+|  SellerController |
++-------------------+
+| + addProduct(product)|
+| + editProduct(productId, newDetails)|
+| + deleteProduct(productId)|
++-------------------+
+
++-------------------+
+|  AdminController  |
++-------------------+
+| + manageUserAccounts()|
+| + moderateProductListings()|
+| + handleCustomerService()|
++-------------------+

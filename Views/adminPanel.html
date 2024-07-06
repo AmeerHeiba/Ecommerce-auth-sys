@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+
+    <style>
+        /* Custom responsive table styles */
+        @media (max-width: 767.98px) {
+            .table thead {
+                display: none;
+            }
+            .table tbody, .table tr, .table td {
+                display: block;
+                width: 100%;
+            }
+            .table tr {
+                margin-bottom: 1rem;
+            }
+            .table td {
+                text-align: right;
+                padding-left: 50%;
+                position: relative;
+            }
+            .table td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 1rem;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4">Admin Dashboard</h1>
+        <div class="card">
+            <div class="card-header">
+                <h2>Seller Requests</h2>
+            </div>
+            <div class="card-body">
+                <table id="sellerRequestsTable" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Seller Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Contact</th>
+                            <th scope="col">User Name</th>
+                            <th scope="col">Request Date</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../models/userModel.js"></script>
+    <script src="../models/sellerModel.js"></script>
+    <!-- <script src="../Controllers/adminController.js"></script> -->
+    <script src="../Models/adminModel.js"></script>
+    <script src="../Controllers/adminController.js"></script>
+    <script src="../controllers/authController.js"></script>
+
+</body>
+</html>

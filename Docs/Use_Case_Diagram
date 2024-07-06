@@ -1,0 +1,21 @@
+            +----------------------------+
+            |        E-commerce System   |
+            +----------------------------+
+            | 1. User Authentication     |
+            | 2. View Home Page          |
+            | 3. Browse Product Catalog  |
+            | 4. View Product Details    |
+            | 5. Add to Shopping Cart    |
+            | 6. Checkout                |
+            | 7. View Order History      |
+            | 8. Manage Account Details  |
+            | 9. Manage Products         |
+            |10. Process Orders          |
+            |11. View Sales Analytics    |
+            |12. Manage User Accounts    |
+            |13. Moderate Product Listings|
+            |14. Handle Customer Service |
+            +----------------------------+
+              /            |         \
+             /             |          \
+        Customer        Seller       Admin

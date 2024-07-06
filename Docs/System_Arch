@@ -1,0 +1,120 @@
+The system architecture for the Multi-Actor E-commerce System will be designed to ensure scalability, maintainability, and ease of development. We'll use a multi-tier architecture, which is common for web applications. This architecture will be divided into the following layers:
+
+1. **Presentation Layer**
+2. **Application Layer**
+3. **Data Access Layer**
+4. **Local Storage**
+
+### 1. Presentation Layer
+
+This layer is responsible for interacting with the users. It consists of the front-end part of the application, which includes HTML, CSS, JavaScript, and Bootstrap. The key components of this layer are:
+
+- **HTML:** Structure of web pages.
+- **CSS & Bootstrap:** Styling and responsive design.
+- **JavaScript:** Client-side logic and interactions.
+
+### 2. Application Layer
+
+This layer handles the business logic of the system. It processes user inputs, interacts with the data access layer, and returns the appropriate outputs. It consists of various controllers and models.
+
+#### Controllers:
+- **AuthController:** Handles user authentication (registration, login, logout).
+- **UserController:** Manages user-specific functionalities like viewing order history and updating account details.
+- **CartController:** Manages shopping cart functionalities.
+- **OrderController:** Handles the checkout process.
+- **SellerController:** Manages product-related functionalities for sellers.
+- **AdminController:** Manages administrative functionalities like user account management and product moderation.
+
+#### Models:
+- **User:** Represents user data and methods to interact with user data in local storage.
+- **Product:** Represents product data and methods to interact with product data in local storage.
+- **Order:** Represents order data and methods to interact with order data in local storage.
+
+### 3. Data Access Layer
+
+This layer abstracts the data storage and retrieval logic from the rest of the application. Since we are using local storage, this layer consists of methods to read from and write to the local storage.
+
+- **Local Storage:** Browser's local storage is used to store user data, product data, and order data.
+
+### 4. Local Storage
+
+Local Storage is used to persist data on the client-side. It is a simple key-value storage provided by the browser, and it allows the application to store data persistently across sessions.
+
+### System Architecture Diagram
+
+```plaintext
++---------------------------------------------------+
+|                   Presentation Layer              |
+|---------------------------------------------------|
+|      HTML         CSS/Bootstrap        JavaScript |
++---------------------------------------------------+
+                     |
+                     v
++---------------------------------------------------+
+|                   Application Layer               |
+|---------------------------------------------------|
+| Controllers:                                      |
+|  - AuthController                                 |
+|  - UserController                                 |
+|  - CartController                                 |
+|  - OrderController                                |
+|  - SellerController                               |
+|  - AdminController                                |
+| Models:                                           |
+|  - User                                           |
+|  - Product                                        |
+|  - Order                                          |
++---------------------------------------------------+
+                     |
+                     v
++---------------------------------------------------+
+|                   Data Access Layer               |
+|---------------------------------------------------|
+| Methods to interact with local storage:           |
+|  - User.getUsers()                                |
+|  - User.saveUsers(users)                          |
+|  - Product.getProducts()                          |
+|  - Product.saveProducts(products)                 |
+|  - Order.getOrders()                              |
+|  - Order.saveOrders(orders)                       |
++---------------------------------------------------+
+                     |
+                     v
++---------------------------------------------------+
+|                    Local Storage                  |
+|---------------------------------------------------|
+| Browser's local storage for persistent data       |
+| storage                                           |
++---------------------------------------------------+
+```
+
+### Detailed Description of Each Component
+
+1. **Presentation Layer:**
+   - **HTML:** Defines the structure of web pages, including the home page, product catalog, product details, shopping cart, checkout page, user dashboards, etc.
+   - **CSS & Bootstrap:** Styles the web pages for a clean, responsive layout that works across different devices and screen sizes.
+   - **JavaScript:** Handles client-side logic such as form submissions, dynamic content updates, and interactions with the Application Layer via controllers.
+
+2. **Application Layer:**
+   - **AuthController:** Manages user authentication by handling registration, login, and logout processes. It interacts with the User model to store and retrieve user credentials.
+   - **UserController:** Provides functionalities for customers to view their order history and update their account details.
+   - **CartController:** Manages the shopping cart, including adding/removing items and clearing the cart.
+   - **OrderController:** Handles the checkout process, including creating new orders and storing them in local storage.
+   - **SellerController:** Allows sellers to add, edit, and delete products and view sales analytics.
+   - **AdminController:** Provides administrative functionalities like managing user accounts and moderating product listings.
+
+3. **Data Access Layer:**
+   - **Methods to Interact with Local Storage:** Abstracts the direct interaction with local storage. Provides methods to save and retrieve data for users, products, and orders.
+
+4. **Local Storage:**
+   - **Browser’s Local Storage:** Used to store all persistent data, including user details, product information, and order records. This ensures that data is retained across browser sessions.
+
+### Interaction Flow Example: User Registration
+
+1. **Presentation Layer:** User fills out the registration form and submits it.
+2. **Application Layer:** `AuthController.register()` is called with the user details.
+3. **Data Access Layer:** `User.addUser()` method is called, which saves the new user to local storage.
+4. **Local Storage:** User data is stored in the browser's local storage.
+5. **Application Layer:** Success message is generated and the user is redirected to the login page.
+
+This architecture ensures a clear separation of concerns, making the system easier to develop, test, and maintain.
